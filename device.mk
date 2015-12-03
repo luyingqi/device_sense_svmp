@@ -64,9 +64,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
     frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
     $(foreach f,$(wildcard $(LOCAL_PATH)/idc/*.idc $(LOCAL_PATH)/keylayout/*.kl),$(f):$(subst $(LOCAL_PATH),system/usr,$(f))) \
-		device/sense/svmp/audio_policy.conf:system/etc/audio_policy.conf \
-		#$(foreach f,$(wildcard $(LOCAL_PATH)/alsa/*),$(f):$(subst $(LOCAL_PATH),system/etc,$(f))) \
-		#frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml \
+	device/sense/svmp/audio_policy.conf:system/etc/audio_policy.conf \
+	$(foreach f,$(wildcard $(LOCAL_PATH)/alsa/*),$(f):$(subst $(LOCAL_PATH),system/etc,$(f))) \
+	frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml \
 
 PRODUCT_TAGS += dalvik.gc.type-precise
 
@@ -84,7 +84,7 @@ $(call inherit-product,$(LOCAL_PATH)/firmware.mk)
 $(call inherit-product-if-exists,external/tslib/tslib.mk)
 
 # Get the alsa files
-#$(call inherit-product-if-exists,hardware/libaudio/alsa.mk)
+$(call inherit-product-if-exists,hardware/libaudio/alsa.mk)
 
 # Get GPS configuration
 $(call inherit-product-if-exists,device/common/gps/gps_as.mk)
