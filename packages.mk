@@ -76,3 +76,30 @@ PRODUCT_PACKAGES += \
     Superuser \
     TSCalibration2 \
     Trebuchet \
+
+# Gapps (non-priv)
+PRODUCT_PACKAGES += \
+	GenieWidget \
+	Gmail2 \
+	GoogleCalendarSyncAdapter \
+	GoogleContactsSyncAdapter \
+	GoogleEars \
+	GoogleTTS \
+	Hangouts \
+	MediaUploader \
+
+# Gapps (priv)
+PRODUCT_PACKAGES += \
+	ConfigUpdater \
+	GmsCore \
+	GoogleBackupTransport \
+	GoogleFeedback \
+	GoogleLoginService \
+	GoogleOneTimeInitializer \
+	GooglePartnerSetup \
+	GoogleServicesFramework \
+	Phonesky \
+	SetupWizard \
+	Velvet \
+	talkback \
+

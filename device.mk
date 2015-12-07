@@ -68,6 +68,15 @@ PRODUCT_COPY_FILES += \
 	$(foreach f,$(wildcard $(LOCAL_PATH)/alsa/*),$(f):$(subst $(LOCAL_PATH),system/etc,$(f))) \
 	frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml \
 
+# Copy gapps
+PRODUCT_COPY_FILES += \
+	$(foreach f,$(wildcard $(LOCAL_PATH)/gapps/framework/*),$(f):$(subst $(LOCAL_PATH)/gapps,system,$(f))) \
+	$(foreach f,$(wildcard $(LOCAL_PATH)/gapps/etc/permissions/*),$(f):$(subst $(LOCAL_PATH)/gapps,system,$(f))) \
+	$(foreach f,$(wildcard $(LOCAL_PATH)/gapps/etc/preferred-apps/*),$(f):$(subst $(LOCAL_PATH)/gapps,system,$(f))) \
+	$(foreach f,$(wildcard $(LOCAL_PATH)/gapps/usr/srec/en-US/*),$(f):$(subst $(LOCAL_PATH)/gapps,system,$(f))) \
+	$(LOCAL_PATH)/gapps/etc/g.prop:system/etc/g.prop
+
+
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_CHARACTERISTICS := tablet
