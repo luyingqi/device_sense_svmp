@@ -73,9 +73,11 @@ on boot
 
     # merge from system.prop
     setprop ro.config.sync yes
-    setprop app.setupwizard.disable 0
+    # setprop app.setupwizard.disable 0
+    setprop app.setupwizard.disable 1
     setprop ro.alarm.volume.adjustable true
-    setprop ro.simulated.phone false
+    #setprop ro.simulated.phone false
+    setprop ro.simulated.phone true
     # disable red frame boarder in eng build
     setprop persist.sys.strictmode.visual 0
     setprop persist.sys.strictmode.disable 1

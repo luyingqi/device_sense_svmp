@@ -99,7 +99,6 @@ PRODUCT_PACKAGES += \
 	GooglePartnerSetup \
 	GoogleServicesFramework \
 	Phonesky \
-	SetupWizard \
 	Velvet \
 	talkback \
 

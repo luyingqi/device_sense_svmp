@@ -1,3 +1,6 @@
 # system.prop for jb-x86
 poweroff.doubleclick=1
 #media.stagefright.use-nuplayer=1
+
+# sense setting
+lockscreen.disabled=yes
