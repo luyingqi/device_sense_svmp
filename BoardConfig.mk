@@ -7,82 +7,18 @@ TARGET_NO_BOOTLOADER := true
 
 TARGET_ARCH := x86
 TARGET_CPU_ABI := x86
-#TARGET_ARCH_VARIANT := x86-atom
-TARGET_PRELINK_MODULE := false
-TARGET_BOARD_PLATFORM := android-x86
-#TARGET_INITRD_SCRIPTS := device/generic/x86/android-x86_info
 
-# Some framework code requires this to enable BT
-BOARD_HAVE_BLUETOOTH := true
-
-# customize the malloced address to be 16-byte aligned
-BOARD_MALLOC_ALIGNMENT := 16
-
-# Enable dex-preoptimization to speed up the first boot sequence
-# of an SDK AVD. Note that this operation only works on Linux for now
-ifeq ($(HOST_OS),linux)
-WITH_DEXPREOPT := true
-endif
+TARGET_CPU_ABI_LIST_32_BIT := $(TARGET_CPU_ABI) $(TARGET_CPU_ABI2) $(NATIVE_BRIDGE_ABI_LIST_32_BIT)
+TARGET_CPU_ABI_LIST := $(TARGET_CPU_ABI_LIST_32_BIT)
 
 TARGET_USERIMAGES_USE_EXT4 := true
-TARGET_BOOTIMAGE_USE_EXT2 := true
-TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 419430400
+BOARD_CACHEIMAGE_PARTITION_SIZE := 69206016
+BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 512
+TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
 
-# Make system image 2GB
-BOARD_SYSTEMIMAGE_PARTITION_SIZE = $(if $(MKSQUASHFS),0,2147483648)
+BOARD_SEPOLICY_DIRS += build/target/board/generic/sepolicy
+BOARD_SEPOLICY_DIRS += build/target/board/generic_x86/sepolicy
 
-# the following variables could be overridden
-TARGET_NO_KERNEL ?= false
-TARGET_NO_RECOVERY ?= true
-TARGET_PROVIDES_INIT_RC ?= true
-TARGET_CPU_SMP ?= true
-TARGET_EXTRA_KERNEL_MODULES := tp_smapi
-ifneq ($(filter efi_img,$(MAKECMDGOALS)),)
-TARGET_KERNEL_ARCH ?= x86_64
-endif
-TARGET_KERNEL_DIFFCONFIG := $(PRODUCT_DIR)android-$(if $(TARGET_KERNEL_ARCH),$(TARGET_KERNEL_ARCH),$(TARGET_ARCH))_diffconfig
-
-TARGET_USE_DISKINSTALLER ?= false
-
-BOARD_USES_GENERIC_AUDIO ?= false
-BOARD_USES_ALSA_AUDIO ?= true
-BUILD_WITH_ALSA_UTILS ?= true
-BOARD_HAS_GPS_HARDWARE ?= true
-
-BUILD_EMULATOR ?= false
-BUILD_STANDALONE_EMULATOR ?= false
-BUILD_EMULATOR_QEMUD ?= false
-BUILD_EMULATOR_OPENGL ?= false
-BUILD_EMULATOR_QEMU_PROPS ?= false
-BUILD_EMULATOR_CAMERA_HAL ?= false
-BUILD_EMULATOR_GPS_MODULE ?= false
-BUILD_EMULATOR_LIGHTS_MODULE ?= false
-BUILD_EMULATOR_SENSORS_MODULE ?= false
-
-BOARD_USE_LIBVA_INTEL_DRIVER := true
-BOARD_USE_LIBVA := true
-BOARD_USE_LIBMIX := true
-BOARD_USES_WRS_OMXIL_CORE := true
-USE_INTEL_OMX_COMPONENTS := true
-
-USE_OPENGL_RENDERER ?= true
-NUM_FRAMEBUFFER_SURFACE_BUFFERS ?= 3
-
-# USE_CAMERA_STUB ?= false
-USE_CAMERA_STUB ?= true
-
-# This enables the wpa wireless driver
-BOARD_WPA_SUPPLICANT_DRIVER ?= NL80211
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB ?= private_lib_driver_cmd
-WPA_SUPPLICANT_VERSION ?= VER_0_8_X
-WIFI_DRIVER_MODULE_PATH ?= auto
-
-#BOARD_GPU_DRIVERS ?= i915 i965 ilo r300g r600g nouveau vmwgfx
-BOARD_GPU_DRIVERS ?= i915 i965 nouveau r300g r600g swrast vmwgfx
-ifneq ($(strip $(BOARD_GPU_DRIVERS)),)
-TARGET_HARDWARE_3D := true
-BOARD_EGL_CFG ?= device/generic/x86/gpu/egl_mesa.cfg
-endif
-
-BOARD_KERNEL_CMDLINE := root=/dev/ram0 androidboot.hardware=$(TARGET_PRODUCT)
+include device/generic/common/BoardConfig.mk

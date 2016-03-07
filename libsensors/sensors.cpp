@@ -119,27 +119,27 @@ struct svmp_sensor_event_t {
 
 struct sensors_event_t events[] = {
 	{	sizeof(struct sensors_event_t), SENSOR_HANDLE_ACCELEROMETER, SENSOR_TYPE_ACCELEROMETER, 
-			0, 0, {{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }}, {0, 0, 0, 0}	},
+			0, 0, {{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }}, 0, {0, 0, 0}	},
 	{	sizeof(struct sensors_event_t), SENSOR_HANDLE_MAGNETIC_FIELD, SENSOR_TYPE_MAGNETIC_FIELD, 
-			0, 0, {{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }}, {0, 0, 0, 0}	},
+			0, 0, {{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }}, 0, {0, 0, 0}	},
 	{	sizeof(struct sensors_event_t), SENSOR_HANDLE_ORIENTATION, SENSOR_TYPE_ORIENTATION, 
-			0, 0, {{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }}, {0, 0, 0, 0}	},
+			0, 0, {{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }}, 0, {0, 0, 0}	},
 	{	sizeof(struct sensors_event_t), SENSOR_HANDLE_GYROSCOPE, SENSOR_TYPE_GYROSCOPE, 
-			0, 0, {{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }}, {0, 0, 0, 0}	},
+			0, 0, {{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }}, 0, {0, 0, 0}	},
 	{	sizeof(struct sensors_event_t), SENSOR_HANDLE_LIGHT, SENSOR_TYPE_LIGHT, 
-			0, 0, {{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }}, {0, 0, 0, 0}	},
+			0, 0, {{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }}, 0, {0, 0, 0}	},
 	{	sizeof(struct sensors_event_t), SENSOR_HANDLE_PRESSURE, SENSOR_TYPE_PRESSURE, 
-			0, 0, {{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }}, {0, 0, 0, 0}	},
+			0, 0, {{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }}, 0, {0, 0, 0}	},
 //	{	sizeof(struct sensors_event_t), SENSOR_HANDLE_TEMPERATURE, SENSOR_TYPE_TEMPERATURE, 
 //			0, 0, {{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }}, {0, 0, 0, 0}	},
 	{	sizeof(struct sensors_event_t), SENSOR_HANDLE_PROXIMITY, SENSOR_TYPE_PROXIMITY, 
-			0, 0, {{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }}, {0, 0, 0, 0}	},
+			0, 0, {{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }}, 0, {0, 0, 0}	},
 	{	sizeof(struct sensors_event_t), SENSOR_HANDLE_GRAVITY, SENSOR_TYPE_GRAVITY, 
-			0, 0, {{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }}, {0, 0, 0, 0}	},
+			0, 0, {{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }}, 0, {0, 0, 0}	},
 	{	sizeof(struct sensors_event_t), SENSOR_HANDLE_LINEAR_ACCELERATION, SENSOR_TYPE_LINEAR_ACCELERATION, 
-			0, 0, {{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }}, {0, 0, 0, 0}	},
+			0, 0, {{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }}, 0, {0, 0, 0}	},
 	{	sizeof(struct sensors_event_t), SENSOR_HANDLE_ROTATION_VECTOR, SENSOR_TYPE_ROTATION_VECTOR, 
-			0, 0, {{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }}, {0, 0, 0, 0}	},
+			0, 0, {{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }}, 0, {0, 0, 0}	},
 //	{	sizeof(struct sensors_event_t), SENSOR_HANDLE_RELATIVE_HUMIDITY, SENSOR_TYPE_RELATIVE_HUMIDITY, 
 //			0, 0, {{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }}, {0, 0, 0, 0}	},
 //	{	sizeof(struct sensors_event_t), SENSOR_HANDLE_AMBIENT_TEMPERATURE, SENSOR_TYPE_AMBIENT_TEMPERATURE, 
@@ -167,6 +167,10 @@ static const struct sensor_t sSensorList[] = {
       0,                                      // minDelay
       0,                                      // fifoReservedEventCount
       0,                                      // fifoMaxEventCount
+      SENSOR_STRING_TYPE_ACCELEROMETER        // stringType
+      0,                                      // requiredPermission
+      80000,                                  // maxDelay
+      SENSOR_FLAG_CONTINUOUS_MODE,            // flags           
       {}},                                    // reserved
 
     { "SVMP Remote Magnetic Field Sensor",    // name
@@ -180,6 +184,10 @@ static const struct sensor_t sSensorList[] = {
       0,                                      // minDelay 
       0,                                      // fifoReservedEventCount
       0,                                      // fifoMaxEventCount
+      SENSOR_STRING_TYPE_MAGNETIC_FIELD       // stringType
+      0,                                      // requiredPermission
+      80000,                                  // maxDelay
+      SENSOR_FLAG_CONTINUOUS_MODE,            // flags
       {}},                                    // reserved
 
     { "SVMP Remote Orientation Sensor",       // name
@@ -193,6 +201,10 @@ static const struct sensor_t sSensorList[] = {
       0,                                      // minDelay 
       0,                                      // fifoReservedEventCount
       0,                                      // fifoMaxEventCount
+      SENSOR_STRING_TYPE_ORIENTATION          // stringType
+      0,                                      // requiredPermission
+      80000,                                  // maxDelay
+      SENSOR_FLAG_CONTINUOUS_MODE,            // flags
       {}},                                    // reserved
 
     { "SVMP Remote Gyroscope",                // name
@@ -206,6 +218,10 @@ static const struct sensor_t sSensorList[] = {
       0,                                      // minDelay 
       0,                                      // fifoReservedEventCount
       0,                                      // fifoMaxEventCount
+      SENSOR_STRING_TYPE_GYROSCOPE            // stringType
+      0,                                      // requiredPermission
+      80000,                                  // maxDelay
+      SENSOR_FLAG_CONTINUOUS_MODE,            // flags
       {}},                                    // reserved
 
     { "SVMP Remote Light Sensor",             // name
@@ -219,6 +235,10 @@ static const struct sensor_t sSensorList[] = {
       0,                                      // minDelay 
       0,                                      // fifoReservedEventCount
       0,                                      // fifoMaxEventCount
+      SENSOR_STRING_TYPE_LIGHT                // stringType
+      0,                                      // requiredPermission
+      80000,                                  // maxDelay
+      SENSOR_FLAG_CONTINUOUS_MODE,            // flags
       {}},                                    // reserved
 
     { "SVMP Remote Pressure Sensor",          // name
@@ -232,6 +252,10 @@ static const struct sensor_t sSensorList[] = {
       0,                                      // minDelay 
       0,                                      // fifoReservedEventCount
       0,                                      // fifoMaxEventCount
+      SENSOR_STRING_TYPE_PRESSURE             // stringType
+      0,                                      // requiredPermission
+      80000,                                  // maxDelay
+      SENSOR_FLAG_CONTINUOUS_MODE,            // flags
       {}},                                    // reserved
 
 //    { "SVMP Remote Temperature Sensor",       // name
@@ -258,6 +282,10 @@ static const struct sensor_t sSensorList[] = {
       0,                                      // minDelay 
       0,                                      // fifoReservedEventCount
       0,                                      // fifoMaxEventCount
+      SENSOR_STRING_TYPE_PROXIMITY            // stringType
+      0,                                      // requiredPermission
+      80000,                                  // maxDelay
+      SENSOR_FLAG_CONTINUOUS_MODE,            // flags
       {}},                                    // reserved
 
     { "SVMP Remote Gravity Sensor",           // name
@@ -271,6 +299,10 @@ static const struct sensor_t sSensorList[] = {
       0,                                      // minDelay 
       0,                                      // fifoReservedEventCount
       0,                                      // fifoMaxEventCount
+      SENSOR_STRING_TYPE_GRAVITY              // stringType
+      0,                                      // requiredPermission
+      80000,                                  // maxDelay
+      SENSOR_FLAG_CONTINUOUS_MODE,            // flags
       {}},                                    // reserved
 
     { "SVMP Remote Linear Acceleration Sensor", // name
@@ -284,6 +316,10 @@ static const struct sensor_t sSensorList[] = {
       0,                                        // minDelay 
       0,                                        // fifoReservedEventCount
       0,                                        // fifoMaxEventCount
+      SENSOR_STRING_TYPE_LINEAR_ACCELERATION    // stringType
+      0,                                      // requiredPermission
+      80000,                                  // maxDelay
+      SENSOR_FLAG_CONTINUOUS_MODE,            // flags
       {}},                                      // reserved
 
     { "SVMP Remote Rotation Vector Sensor",   // name
@@ -297,6 +333,10 @@ static const struct sensor_t sSensorList[] = {
       0,                                      // minDelay 
       0,                                      // fifoReservedEventCount
       0,                                      // fifoMaxEventCount
+      SENSOR_STRING_TYPE_ROTATION_VECTOR      // stringType
+      0,                                      // requiredPermission
+      80000,                                  // maxDelay
+      SENSOR_FLAG_CONTINUOUS_MODE,            // flags
       {}},                                    // reserved
 
 //    { "SVMP Remote Relative Humidity Sensor", // name
