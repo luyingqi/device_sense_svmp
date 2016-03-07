@@ -167,7 +167,7 @@ static const struct sensor_t sSensorList[] = {
       0,                                      // minDelay
       0,                                      // fifoReservedEventCount
       0,                                      // fifoMaxEventCount
-      SENSOR_STRING_TYPE_ACCELEROMETER        // stringType
+      SENSOR_STRING_TYPE_ACCELEROMETER,       // stringType
       0,                                      // requiredPermission
       80000,                                  // maxDelay
       SENSOR_FLAG_CONTINUOUS_MODE,            // flags           
@@ -184,7 +184,7 @@ static const struct sensor_t sSensorList[] = {
       0,                                      // minDelay 
       0,                                      // fifoReservedEventCount
       0,                                      // fifoMaxEventCount
-      SENSOR_STRING_TYPE_MAGNETIC_FIELD       // stringType
+      SENSOR_STRING_TYPE_MAGNETIC_FIELD,      // stringType
       0,                                      // requiredPermission
       80000,                                  // maxDelay
       SENSOR_FLAG_CONTINUOUS_MODE,            // flags
@@ -201,7 +201,7 @@ static const struct sensor_t sSensorList[] = {
       0,                                      // minDelay 
       0,                                      // fifoReservedEventCount
       0,                                      // fifoMaxEventCount
-      SENSOR_STRING_TYPE_ORIENTATION          // stringType
+      SENSOR_STRING_TYPE_ORIENTATION,         // stringType
       0,                                      // requiredPermission
       80000,                                  // maxDelay
       SENSOR_FLAG_CONTINUOUS_MODE,            // flags
@@ -218,7 +218,7 @@ static const struct sensor_t sSensorList[] = {
       0,                                      // minDelay 
       0,                                      // fifoReservedEventCount
       0,                                      // fifoMaxEventCount
-      SENSOR_STRING_TYPE_GYROSCOPE            // stringType
+      SENSOR_STRING_TYPE_GYROSCOPE,           // stringType
       0,                                      // requiredPermission
       80000,                                  // maxDelay
       SENSOR_FLAG_CONTINUOUS_MODE,            // flags
@@ -235,7 +235,7 @@ static const struct sensor_t sSensorList[] = {
       0,                                      // minDelay 
       0,                                      // fifoReservedEventCount
       0,                                      // fifoMaxEventCount
-      SENSOR_STRING_TYPE_LIGHT                // stringType
+      SENSOR_STRING_TYPE_LIGHT,               // stringType
       0,                                      // requiredPermission
       80000,                                  // maxDelay
       SENSOR_FLAG_CONTINUOUS_MODE,            // flags
@@ -252,7 +252,7 @@ static const struct sensor_t sSensorList[] = {
       0,                                      // minDelay 
       0,                                      // fifoReservedEventCount
       0,                                      // fifoMaxEventCount
-      SENSOR_STRING_TYPE_PRESSURE             // stringType
+      SENSOR_STRING_TYPE_PRESSURE,            // stringType
       0,                                      // requiredPermission
       80000,                                  // maxDelay
       SENSOR_FLAG_CONTINUOUS_MODE,            // flags
@@ -282,7 +282,7 @@ static const struct sensor_t sSensorList[] = {
       0,                                      // minDelay 
       0,                                      // fifoReservedEventCount
       0,                                      // fifoMaxEventCount
-      SENSOR_STRING_TYPE_PROXIMITY            // stringType
+      SENSOR_STRING_TYPE_PROXIMITY,           // stringType
       0,                                      // requiredPermission
       80000,                                  // maxDelay
       SENSOR_FLAG_CONTINUOUS_MODE,            // flags
@@ -299,7 +299,7 @@ static const struct sensor_t sSensorList[] = {
       0,                                      // minDelay 
       0,                                      // fifoReservedEventCount
       0,                                      // fifoMaxEventCount
-      SENSOR_STRING_TYPE_GRAVITY              // stringType
+      SENSOR_STRING_TYPE_GRAVITY,             // stringType
       0,                                      // requiredPermission
       80000,                                  // maxDelay
       SENSOR_FLAG_CONTINUOUS_MODE,            // flags
@@ -316,7 +316,7 @@ static const struct sensor_t sSensorList[] = {
       0,                                        // minDelay 
       0,                                        // fifoReservedEventCount
       0,                                        // fifoMaxEventCount
-      SENSOR_STRING_TYPE_LINEAR_ACCELERATION    // stringType
+      SENSOR_STRING_TYPE_LINEAR_ACCELERATION,   // stringType
       0,                                      // requiredPermission
       80000,                                  // maxDelay
       SENSOR_FLAG_CONTINUOUS_MODE,            // flags
@@ -333,7 +333,7 @@ static const struct sensor_t sSensorList[] = {
       0,                                      // minDelay 
       0,                                      // fifoReservedEventCount
       0,                                      // fifoMaxEventCount
-      SENSOR_STRING_TYPE_ROTATION_VECTOR      // stringType
+      SENSOR_STRING_TYPE_ROTATION_VECTOR,     // stringType
       0,                                      // requiredPermission
       80000,                                  // maxDelay
       SENSOR_FLAG_CONTINUOUS_MODE,            // flags
