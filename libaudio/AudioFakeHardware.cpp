@@ -310,6 +310,18 @@ status_t AudioFakeHardware::dump(int fd, const Vector<String16>& args)
     return NO_ERROR;
 }
 
+AudioStreamOut* AudioFakeHardware::openOutputStreamWithFlags(
+                                uint32_t devices,
+                                audio_output_flags_t flags,
+                                int *format,
+                                uint32_t *channels,
+                                uint32_t *sampleRate,
+                                status_t *status) 
+{
+    return openOutputStream(devices, format, channels, sampleRate, status);
+}
+
+
 // ----------------------------------------------------------------------------
 
 status_t AudioAACStreamOut::set(
@@ -441,6 +453,11 @@ String8 AudioAACStreamOut::getParameters(const String8& keys)
 }
 
 status_t AudioAACStreamOut::getRenderPosition(uint32_t *dspFrames)
+{
+    return INVALID_OPERATION;
+}
+
+status_t AudioAACStreamOut::getPresentationPosition(uint64_t *frames, struct timespec *timestamp)
 {
     return INVALID_OPERATION;
 }

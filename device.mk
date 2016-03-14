@@ -72,12 +72,12 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
 
 # Copy gapps
-PRODUCT_COPY_FILES += \
-	$(foreach f,$(wildcard $(LOCAL_PATH)/gapps/framework/*),$(f):$(subst $(LOCAL_PATH)/gapps,system,$(f))) \
-	$(foreach f,$(wildcard $(LOCAL_PATH)/gapps/etc/permissions/*),$(f):$(subst $(LOCAL_PATH)/gapps,system,$(f))) \
-	$(foreach f,$(wildcard $(LOCAL_PATH)/gapps/etc/preferred-apps/*),$(f):$(subst $(LOCAL_PATH)/gapps,system,$(f))) \
-	$(foreach f,$(wildcard $(LOCAL_PATH)/gapps/usr/srec/en-US/*),$(f):$(subst $(LOCAL_PATH)/gapps,system,$(f))) \
-	$(LOCAL_PATH)/gapps/etc/g.prop:system/etc/g.prop
+# PRODUCT_COPY_FILES += \
+# 	$(foreach f,$(wildcard $(LOCAL_PATH)/gapps/framework/*),$(f):$(subst $(LOCAL_PATH)/gapps,system,$(f))) \
+# 	$(foreach f,$(wildcard $(LOCAL_PATH)/gapps/etc/permissions/*),$(f):$(subst $(LOCAL_PATH)/gapps,system,$(f))) \
+# 	$(foreach f,$(wildcard $(LOCAL_PATH)/gapps/etc/preferred-apps/*),$(f):$(subst $(LOCAL_PATH)/gapps,system,$(f))) \
+# 	$(foreach f,$(wildcard $(LOCAL_PATH)/gapps/usr/srec/en-US/*),$(f):$(subst $(LOCAL_PATH)/gapps,system,$(f))) \
+# 	$(LOCAL_PATH)/gapps/etc/g.prop:system/etc/g.prop
 
 
 PRODUCT_TAGS += dalvik.gc.type-precise

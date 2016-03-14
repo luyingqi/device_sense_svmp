@@ -87,6 +87,7 @@ public:
     virtual status_t   setParameters(const String8& keyValuePairs); // { return NO_ERROR;}
     virtual String8   getParameters(const String8& keys);
     virtual status_t    getRenderPosition(uint32_t *dspFrames);
+    virtual status_t    getPresentationPosition(uint64_t *frames, struct timespec *timestamp);
 private:
     struct timeval time;
     
@@ -154,6 +155,7 @@ public:
                                 uint32_t *channels=0,
                                 uint32_t *sampleRate=0,
                                 status_t *status=0);
+
     virtual    void        closeOutputStream(AudioStreamOut* out);
 
     virtual AudioStreamIn* openInputStream(
@@ -164,6 +166,27 @@ public:
                                 status_t *status,
                                 AudioSystem::audio_in_acoustics acoustics);
     virtual    void        closeInputStream(AudioStreamIn* in);
+
+
+    virtual AudioStreamOut* openOutputStreamWithFlags(
+                                uint32_t devices,
+                                audio_output_flags_t flags=(audio_output_flags_t)0,
+                                int *format=0,
+                                uint32_t *channels=0,
+                                uint32_t *sampleRate=0,
+                                status_t *status=0);
+
+    virtual status_t setMasterMute(bool muted) { return setMasterVolume(0.0); }
+
+    virtual int createAudioPatch(unsigned int num_sources,
+                               const struct audio_port_config *sources,
+                               unsigned int num_sinks,
+                               const struct audio_port_config *sinks,
+                               audio_patch_handle_t *handle) { return 0; }
+    virtual int releaseAudioPatch(audio_patch_handle_t handle) { return 0; }
+
+    virtual int getAudioPort(struct audio_port *port) { return 0; }
+    virtual int setAudioPortConfig(const struct audio_port_config *config) { return 0; }
 
 
 protected:

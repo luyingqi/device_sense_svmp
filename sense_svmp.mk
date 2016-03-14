@@ -18,23 +18,28 @@
 # It includes the base Android-x86 platform.
 
 # Additional settings used in all AOSP builds
-PRODUCT_PROPERTY_OVERRIDES := \
-    ro.com.android.dateformat=MM-dd-yyyy \
+# PRODUCT_PROPERTY_OVERRIDES := \
+#     ro.com.android.dateformat=MM-dd-yyyy \
 
-# Put en_US first in the list, so make it default.
-#PRODUCT_LOCALES := en_US
+# # Put en_US first in the list, so make it default.
+# #PRODUCT_LOCALES := en_US
 
-# Get a list of languages.
-$(call inherit-product,$(SRC_TARGET_DIR)/product/locales_full.mk)
+# # Get a list of languages.
+# $(call inherit-product,$(SRC_TARGET_DIR)/product/locales_full.mk)
 
-# Get everything else from the parent package
-$(call inherit-product,$(SRC_TARGET_DIR)/product/generic.mk)
+# # Get everything else from the parent package
+# $(call inherit-product,$(SRC_TARGET_DIR)/product/generic.mk)
 
-# Get some sounds
-$(call inherit-product-if-exists,frameworks/base/data/sounds/AudioPackage6.mk)
+# # Get some sounds
+# $(call inherit-product-if-exists,frameworks/base/data/sounds/AudioPackage6.mk)
 
-$(call inherit-product,$(LOCAL_PATH)/device.mk)
-$(call inherit-product,$(LOCAL_PATH)/packages.mk)
+# $(call inherit-product,$(LOCAL_PATH)/device.mk)
+# $(call inherit-product,$(LOCAL_PATH)/packages.mk)
+
+$(call inherit-product,$(SRC_TARGET_DIR)/product/core_64_bit.mk)
+
+# includes the base of Android-x86 platform
+$(call inherit-product,device/generic/common/x86.mk)
 
 # Overrides
 PRODUCT_NAME := sense_svmp

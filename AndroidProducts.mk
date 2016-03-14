@@ -16,4 +16,4 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/sense_svmp.mk \
-    $(LOCAL_DIR)/mini_x86.mk
+    # $(LOCAL_DIR)/mini_x86.mk
